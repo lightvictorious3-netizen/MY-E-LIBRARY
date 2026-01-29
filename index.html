@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eduspark-e-learning</title>
+    <style>
+        body{
+            font-family: "segoe ui" Arial, Helvetica, sans-serif;
+            background: white;
+            color: #333;
+        }
+        header{
+            background: fixed blue;
+            color: aliceblue;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 5px;
+        }
+        nav{
+            background: fixed;
+        }
+        .header h1{
+            font-size: 22px;
+        }
+        .home-btn{
+            padding: 14px 28px;
+            font-size: 16px;
+            background: blue;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+        .dashboard-btn{
+              padding: 14px 28px;
+            font-size: 16px;
+            background: blue;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+        .courses-btn{
+              padding: 14px 28px;
+            font-size: 16px;
+            background: blue;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+        nav:hover{
+            text-decoration: absolute;
+        }
+         .btn-login {
+            padding: 14px 28px;
+            font-size: 16px;
+            background: #fff;
+            color: blue;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+
+        .btn-register {
+            padding: 14px 28px;
+            font-size: 16px;
+            background: #fff;
+            color: blue;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+        .container{
+            margin-right: 300px;
+            margin-left: 300px;
+            margin-top: 80px;
+            padding: 40px 30px;
+            background: blue;
+            color: #fff;
+            padding: 60px 20px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .hero h2{
+            font-size: 34px;
+            margin-bottom: 10px;
+        }
+        .hero p{
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+        .container button{
+            padding: 14px 28px;
+            font-size: 16px;
+            background: #fff;
+            color: blue;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+           
+        }
+        .login-page{
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 420px;
+            margin: auto;
+        }
+        .login-h3{
+            margin-top: 0;
+            color: blue;
+        }
+        footer{
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            background: blue;
+            color: #fff;
+            border-radius: 5px;
+        }        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>EduSpark</h1>
+        <nav>
+     <button class="home-btn" onclick="loginpage()">Home</button>
+     <button class="courses-btn" onclick="loginpage()">Courses</button>
+     <button class="dashboard-btn" onclick="loginpage()">Dashboard</button>
+     <button class="btn-login"onclick="loginpage()">Login</button>
+      <button class="btn-register" onclick="goregister()">Register</button>
+        </nav>
+    </header>
+    <div class="container">
+       <section>
+         <h1  class="hero h2">Learn better </h1>
+         <h1 class="hero h2"> Pass smarter</h1>
+        <p class="hero p"> E-learning designed for technical students</p>
+        <button class="container button" onclick="goregister()">Get started</button>
+        
+       </section>
+    </div>
+   
+    <footer>
+        <p>2026 EduSpark - Technical school learning platform</p>
+    </footer>
+
+    <script>
+
+        function loginpage () {
+            window.location.href="log in.html"
+        }
+         function goregister () {
+            window.location.href="register.html"
+        }
+
+    </script>
+</body>
+</html>

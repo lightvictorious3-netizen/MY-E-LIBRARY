@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduSpark | Register</title>
+
+    <style>
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            margin: 0;
+            background: #f4f6fb;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background: blue;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav button {
+            padding: 10px 20px;
+            background: blue;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            margin-left: 8px;
+            cursor: pointer;
+        }
+
+        /* Register box */
+        .register-container {
+            max-width: 420px;
+            margin: 80px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .register-container h2 {
+            text-align: center;
+            color: blue;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 18px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .register-btn {
+            width: 100%;
+            padding: 12px;
+            background: blue;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Footer */
+        footer {
+            background: blue;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>EduSpark</h1>
+    <nav>
+        <button onclick="goHome()">Home</button>
+        <button>Courses</button>
+        <button>Dashboard</button>
+        <button onclick="goLogin()">Login</button>
+    </nav>
+</header>
+
+<div class="register-container">
+    <h2>Register</h2>
+
+    <form>
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter your full name" required>
+
+        <label>Email</label>
+        <input type="email" placeholder="Enter your email" required>
+
+        <label>Password</label>
+        <input type="password" placeholder="Create a password" required>
+
+        <label>Confirm Password</label>
+        <input type="password" placeholder="Confirm your password" required>
+
+        <button class="register-btn" onclick="gopage()">Register</button>
+    </form>
+</div>
+
+<footer>
+    <p>© 2026 EduSpark - Technical school learning platform</p>
+</footer>
+
+<script>
+    function goHome() {
+        window.location.href = "home.html";
+    }
+
+    function goLogin() {
+        window.location.href = "login.html";
+    }
+    function goregister() {
+        window.location.href = "main home.html";
+    }
+      function gopage(){
+        window.location.href="select.html"
+    }
+</script>
+
+</body>
+</html>

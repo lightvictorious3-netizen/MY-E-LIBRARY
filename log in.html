@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduSpark | Login</title>
+
+    <style>
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            margin: 0;
+            background: #f4f6fb;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background: blue;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav button {
+            padding: 10px 20px;
+            background: blue;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            margin-left: 8px;
+            cursor: pointer;
+        }
+          .register{
+                 padding: 10px 20px;
+            background: white;
+            color: blue;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            margin-left: 8px;
+            cursor: pointer;
+        }
+          
+
+        /* Login box */
+        .login-container {
+            max-width: 400px;
+            margin: 80px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .login-container h2 {
+            text-align: center;
+            color: blue;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 18px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 12px;
+            background: blue;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Footer */
+        footer {
+            background: blue;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>EduSpark</h1>
+    <nav>
+        <button onclick="goHome()">Home</button>
+        <button onclick="gocourses()">Courses</button>
+        <button onclick="godashboard()">Dashboard</button>
+        <button onclick="goregister()" class="register">Register</button>
+    </nav>
+</header>
+
+<div class="login-container">
+    <h2>Login</h2>
+
+    <form id="login">
+        <label >username</label>
+        <input type="text" placeholder="your username" required id="username">
+
+        <label >Password</label>
+        <input type="password" placeholder="Enter your password" required id="password">
+
+        <button class="login-btn" onclick="login(event)">Login</button>
+    </form>
+</div>
+
+<footer>
+    <p>© 2026 EduSpark - Technical school learning platform</p>
+</footer>
+<script>
+function login(event){
+    event.preventDefault();
+
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+
+    /* ELECTRICAL */
+    let elect = {
+        "JOBITECH/E01/025/2551":"E01",
+        "JOBITECH/E02/025/2552":"E02",
+        "JOBITECH/E03/025/2553":"E03",
+        "JOBITECH/E04/025/2554":"E04",
+        "JOBITECH/E05/025/2555":"E05",
+        "JOBITECH/E06/025/2556":"E06",
+        "JOBITECH/E07/025/2557":"E07",
+        "JOBITECH/E08/025/2558":"E08",
+        "JOBITECH/E09/025/2559":"E09",
+        "JOBITECH/E10/025/2560":"E10",
+        "JOBITECH/E11/025/2561":"E11",
+        "JOBITECH/E12/025/2562":"E12",
+        "JOBITECH/E13/025/2563":"E13",
+        "JOBITECH/E14/025/2564":"E14",
+        "JOBITECH/E15/025/2565":"E15",
+        "JOBITECH/E16/025/2566":"E16",
+        "JOBITECH/E17/025/2567":"E17",
+        "JOBITECH/E18/025/2568":"E18",
+        "JOBITECH/E19/025/2569":"E19",
+        "JOBITECH/E20/025/2570":"E20"
+    };
+
+    /* MECHANICAL */
+    let mech = {
+        "JOBITECH/M01/025/2534":"M01",
+        "JOBITECH/M02/025/2535":"M02",
+        "JOBITECH/M03/025/2536":"M03",
+        "JOBITECH/M04/025/2537":"M04",
+        "JOBITECH/M05/025/2538":"M05",
+        "JOBITECH/M06/025/2539":"M06",
+        "JOBITECH/M07/025/2540":"M07",
+        "JOBITECH/M08/025/2541":"M08",
+        "JOBITECH/M09/025/2542":"M09",
+        "JOBITECH/M10/025/2543":"M10",
+        "JOBITECH/M11/025/2544":"M11",
+        "JOBITECH/M12/025/2545":"M12",
+        "JOBITECH/M13/025/2546":"M13",
+        "JOBITECH/M14/025/2547":"M14",
+        "JOBITECH/M15/025/2548":"M15",
+        "JOBITECH/M16/025/2549":"M16",
+        "JOBITECH/M17/025/2550":"M17"
+    };
+
+    /* CIT */
+    let cit = {
+        "JOBITECH/C01/025/2590":"C01",
+        "JOBITECH/C02/025/2591":"C02",
+        "JOBITECH/C03/025/2592":"C03",
+        "JOBITECH/C04/025/2593":"C04",
+        "JOBITECH/C05/025/2594":"C05",
+        "JOBITECH/C06/025/2595":"C06",
+        "JOBITECH/C07/025/2596":"C07",
+        "JOBITECH/C08/025/2597":"C08",
+        "JOBITECH/C09/025/2598":"C09",
+        "JOBITECH/C10/025/2599":"C10",
+        "JOBITECH/C11/025/2600":"C11",
+        "JOBITECH/C12/025/2601":"C12",
+        "JOBITECH/C13/025/2602":"C13",
+        "JOBITECH/C14/025/2603":"C14",
+        "JOBITECH/C15/025/2604":"C15",
+        "JOBITECH/C16/025/2605":"C16",
+        "JOBITECH/C17/025/2606":"C17",
+        "JOBITECH/C18/025/2607":"C18",
+        "JOBITECH/C19/025/2608":"C19",
+        "JOBITECH/C20/025/2609":"C20",
+        "JOBITECH/C21/025/2610":"C21",
+        "JOBITECH/C22/025/2611":"C22",
+        "JOBITECH/C23/025/2612":"C23",
+        "JOBITECH/C24/025/2613":"C24",
+        "JOBITECH/C25/025/2614":"C25"
+    };
+
+    /* YEAR 2 */
+    let year2 = {
+        "YEAR2 MECH":"MECH2",
+        "YEAR2 ELECT":"ELECT2",
+        "YEAR2 CIT":"CIT2"
+    };
+
+    /* STAFF */
+    let staff = {
+        "JOBITECH STAFF":"ADMIN"
+    };
+
+    // LOGIN CHECK
+    if(elect[username] === password){
+        window.location.href = "electrical_main.html";
+    }
+    else if(mech[username] === password){
+       window.location.href = "mechanical_main.html";
+    }
+    else if(cit[username] === password){
+        window.location.href = "cit_main.html";
+    }
+    else if(year2[username] === password){
+        window.location.href = "select_main.html";
+    }
+    else if(staff[username] === password){
+        window.location.href = "select_main.html";
+    }
+    else{
+        alert("Invalid username or password");
+    }
+}
+</script>
+
+
+
+
+</body>
+</html>
